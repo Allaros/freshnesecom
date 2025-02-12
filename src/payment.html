@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Payment"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page__breadcrumbs breadcrumbs">
+					<div class="breadcrumbs__container">
+						<div class="breadcrumbs__page">Homepage</div>
+						<div class="breadcrumbs__page">Checkout page</div>
+					</div>
+				</section>
+				<section class="page__billing billing">
+					<div class="billing__container">
+						<div class="billing__info info-billing">
+							<div class="info-billing__title">Billing info</div>
+							<div class="info-billing__subtitle">
+								<span>Please enter your billing info</span>
+								<span>Step 1 of 5</span>
+							</div>
+							<form action="" class="info-billing__form">
+								<div class="info-billing__inp">
+									<label for="i_1">First name</label>
+									<input id="i_1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="First name" class="info-billing__input">
+								</div>
+								<div class="info-billing__inp">
+									<label for="i_2">Last name</label>
+									<input id="i_2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Last name" class="info-billing__input">
+								</div>
+								<div class="info-billing__inp">
+									<label for="i_3">Email address</label>
+									<input id="i_3" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Email address" class="info-billing__input">
+								</div>
+								<div class="info-billing__inp">
+									<label for="i_4">Phone number</label>
+									<input id="i_4" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Phone number" class="info-billing__input">
+								</div>
+								<div class="info-billing__inp">
+									<label for="i_5">Address</label>
+									<input id="i_5" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Address" class="info-billing__input">
+								</div>
+								<div class="info-billing__inp">
+									<label for="i_6">Town / City</label>
+									<input id="i_6" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Town / City" class="info-billing__input">
+								</div>
+								<div class="info-billing__inp">
+									<label for="i_7">State / Country</label>
+									<input id="i_7" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="State / Country" class="info-billing__input">
+								</div>
+								<div class="info-billing__inp">
+									<label for="i_8">ZIP/Postal code</label>
+									<input id="i_8" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ZIP/Postal code" class="info-billing__input">
+								</div>
+								<div class="info-billing__checkbox checkbox">
+									<input id="c_40" data-error="Ошибка" class="info-billing__chk checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_40" class="info-billing__label checkbox__label"><span class="checkbox__text">Ship to a different address?</span></label>
+								</div>
+							</form>
+							<div class="info-billing__method method-billing">
+								<div class="method-billing__title">Billing method</div>
+								<div class="method-billing__subtitle">
+									<span>Please enter your payment method</span>
+									<span>Step 2 of 5</span>
+								</div>
+								<div class="options">
+									<div class="option__item options__item">
+										<input hidden id="o_10" class="option__input options__input" checked type="radio" value="3" name="option">
+										<label for="o_10" class="option__label options__label"><span class="option__text options__text">FedEx</span><span class="options__count">+32 USD</span></label>
+										<div class="options__img">
+											<span>Additional price</span>
+											<img src="@img/freshnesecom/billing/FedEx_Express 1.jpg" alt="">
+										</div>
+									</div>
+									<div class="option__item options__item">
+										<input hidden id="o_20" class="option__input options__input" type="radio" value="4" name="option">
+										<label for="o_20" class="option__label options__label"><span class="options__text option__text">DHL</span><span class="options__count">+15 USD</span></label>
+										<div class="options__img">
+											<span>Additional price</span>
+											<img src="@img/freshnesecom/billing/dhl.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info-billing__paymnent">
+								<div class="info-billing__title">Payment method</div>
+								<div class="info-billing__subtitle">
+									<span>Please enter your payment method</span>
+									<span>Step 3 of 5</span>
+								</div>
+								<div data-spollers class="info-billing__spollers spollers-billing">
+									<div class="spollers-billing__item">
+										<button type="button" data-spoller class="spollers-billing__title">Credit card
+											<div class="spollers-billing__image">
+												<img src="@img/freshnesecom/billing/visa.svg" alt="">
+												<img src="@img/freshnesecom/billing/mastercard.svg" alt="">
+											</div>
+										</button>
+										<div class="spollers-billing__body">
+											
+											<form action="#">
+												<div class="spollers-billing__card-number">
+													<label for="m_1">Card number</label>
+													<input id="m_1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Card number" class="spollers-billing__input">
+												</div>
+												<div class="spollers-billing__card-info card-info">
+													<div class="card-info__holder">
+														<label for="m_2">Card holder</label>
+														<input id="m_2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Card holder" class="spollers-billing__input">
+													</div>
+													<article>
+														<div class="card-info__date">
+															<label for="m_3">Expiration date</label>
+															<input id="m_3" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="DD/MM/YY" class="spollers-billing__input">
+														</div>
+														<div class="card-info__cvc">
+															<label for="m_4">CVC</label>
+															<input id="m_4" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="CVC" class="spollers-billing__input">
+														</div>
+													</article>
+												</div>	
+											</form>
+										</div>
+									</div>
+									<div class="spollers-billing__item">
+										<button type="button" data-spoller class="spollers-billing__title">PayPal
+											<div class="spollers-billing__image">
+												<img src="@img/freshnesecom/billing/PayPal.svg" alt="">
+											</div>
+										</button>
+										<div class="spollers-billing__body">
+											
+											<form action="#">
+												<div class="spollers-billing__card-number">
+													<label for="m_1">Card number</label>
+													<input id="m_1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Card number" class="spollers-billing__input">
+												</div>
+												<div class="spollers-billing__card-info card-info">
+													<div class="card-info__holder">
+														<label for="m_2">Card holder</label>
+														<input id="m_2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Card holder" class="spollers-billing__input">
+													</div>
+													<article>
+														<div class="card-info__date">
+															<label for="m_3">Expiration date</label>
+															<input id="m_3" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="DD/MM/YY" class="spollers-billing__input">
+														</div>
+														<div class="card-info__cvc">
+															<label for="m_4">CVC</label>
+															<input id="m_4" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="CVC" class="spollers-billing__input">
+														</div>
+													</article>
+												</div>	
+											</form>
+										</div>
+									</div>
+									<div class="spollers-billing__item">
+										<button type="button" data-spoller class="spollers-billing__title">Bitcoin
+											<div class="spollers-billing__image">
+												<img src="@img/freshnesecom/billing/bitcoin.svg" alt="">
+											</div>
+										</button>
+										<div class="spollers-billing__body">
+											
+											<form action="#">
+												<div class="spollers-billing__card-number">
+													<label for="m_1">Card number</label>
+													<input id="m_1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Card number" class="spollers-billing__input">
+												</div>
+												<div class="spollers-billing__card-info card-info">
+													<div class="card-info__holder">
+														<label for="m_2">Card holder</label>
+														<input id="m_2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Card holder" class="spollers-billing__input">
+													</div>
+													<article>
+														<div class="card-info__date">
+															<label for="m_3">Expiration date</label>
+															<input id="m_3" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="DD/MM/YY" class="spollers-billing__input">
+														</div>
+														<div class="card-info__cvc">
+															<label for="m_4">CVC</label>
+															<input id="m_4" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="CVC" class="spollers-billing__input">
+														</div>
+													</article>
+												</div>	
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info-billing__add">
+								<div class="info-billing__title">Additional informations</div>
+								<div class="info-billing__subtitle">
+									<span>Need something else? We will make it for you!</span>
+									<span>Step 4 of 5</span>
+								</div>
+								<div class="info-billing__comment">
+									<label for="comm">Order notes</label>
+									<textarea class="info-billing__textarea" id="comm" autocomplete="off" name="form[]" placeholder="Need a specific delivery day? Sending a gift? Let’s say ..." data-error="Ошибка"></textarea>
+								</div>
+							</div>
+							<div class="info-billing__confirmation">
+								<div class="info-billing__title">Confirmation</div>
+								<div class="info-billing__subtitle">
+									<span>We are getting to the end. Just few clicks and your order si ready!</span>
+									<span>Step 5 of 5</span>
+								</div>
+								<div class="info-billing__checkbox billing-confcheckbox">
+									<form action="#">
+										<input id="c_101" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="c_101" class="checkbox__label info-billing__conflabel">I agree with sending an Marketing and newsletter emails. No spam, promissed!</label>
+										<input id="c_102" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="c_102" class="checkbox__label info-billing__conflabel">I agree with our terms and conditions and privacy policy.</label>
+										<button class="info-billing__confirm" type="submit">Complete order</button>
+									</form>
+								</div>
+								<div class="info-billing__safety">
+									<img src="@img/freshnesecom/billing/safety.svg" alt="">
+									<h2>All your data are safe</h2>
+									<p>We are using the most advanced security to provide you the best experience ever.</p>
+								</div>
+							</div>
+						</div>
+						<div class="billing__basket">
+							<div class="basket">
+								<div class="basket__title">
+									<h2>Order Summary</h2>
+									<div class="basket__subtitle">Price can change depending on shipping method and taxes of your state.</div>
+								</div>
+								<div class="basket__product product-basket">
+									<div class="product-basket__image-ibg">
+									</div>
+									<div class="product-basket__name">
+										<div class="product-basket__title">Product title</div>
+										<div class="product-basket__farm">
+											<h3>Farm:</h3>
+											<div class="product-basket__farm-name">Tharamis Farm</div>
+										</div>
+										<div class="product-basket__freshness">
+											<h3>Freshness:</h3>
+											<div class="product-basket__freshness-time">1 day old</div>
+										</div>
+										<div class="product-basket__rating">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+										</div>
+									</div>
+									<div class="product-basket__buttons">
+										<button class="product-basket__fav">Wishlist</button>
+										<button class="product-basket__compare">Compare</button>
+										<button class="product-basket__remove">Remove</button>
+									</div>
+									<div class="product-basket__check">
+										<div class="product-basket__block">
+											<div class="product-basket__price">
+												<div class="product-basket__last-prise">36.99 USD</div>
+												<div class="product-basket__previous-price">48.56 USD</div>
+											</div>
+											<div class="product-basket__count">
+												<input type="text" placeholder="1" class="product-basket__num">
+												<select name="form[]" class="product-basket__sel">
+													<option value="1" selected>Pcs</option>
+													<option value="2">kgs</option>
+													<option value="3">box</option>
+													<option value="4">pack</option>
+												</select>										
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="basket__product product-basket">
+									<div class="product-basket__image-ibg">
+									</div>
+									<div class="product-basket__name">
+										<div class="product-basket__title">Product title</div>
+										<div class="product-basket__farm">
+											<h3>Farm:</h3>
+											<div class="product-basket__farm-name">Tharamis Farm</div>
+										</div>
+										<div class="product-basket__freshness">
+											<h3>Freshness:</h3>
+											<div class="product-basket__freshness-time">1 day old</div>
+										</div>
+										<div class="product-basket__rating">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+										</div>
+									</div>
+									<div class="product-basket__buttons">
+										<button class="product-basket__fav">Wishlist</button>
+										<button class="product-basket__compare">Compare</button>
+										<button class="product-basket__remove">Remove</button>
+									</div>
+									<div class="product-basket__check">
+										<div class="product-basket__block">
+											<div class="product-basket__price">
+												<div class="product-basket__last-prise">36.99 USD</div>
+												<div class="product-basket__previous-price">48.56 USD</div>
+											</div>
+											<div class="product-basket__count">
+												<input type="text" placeholder="1" class="product-basket__num">
+												<select name="form[]" class="product-basket__sel">
+													<option value="1" selected>Pcs</option>
+													<option value="2">kgs</option>
+													<option value="3">box</option>
+													<option value="4">pack</option>
+												</select>										
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="basket__subtotal">
+									<div class="basket__line line-basket">
+										<div class="line-basket__name">Subtotal</div>
+										<div class="line-basket__value">73.98 USD</div>
+									</div>
+									<div class="basket__line line-basket">
+										<div class="line-basket__name">Tax</div>
+										<div class="line-basket__value">17% 16.53 USD</div>
+									</div>
+									<div class="basket__line line-basket">
+										<div class="line-basket__name">Shipping</div>
+										<div class="line-basket__value">0 USD</div>
+									</div>
+								</div>
+								<div class="basket__promo promo-basket">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Apply promo code" class="promo-basket__input">
+									<button class="promo-basket__button">Apply now</button>
+								</div>
+								<div class="basket__total total-basket">
+									<div class="total-basket__text">
+										<div class="total-basket__title">Total Order</div>
+										<div class="total-basket__delivery">Guaranteed delivery day:  June 12, 2020</div>
+									</div>
+									<div class="total-basket__price">89.84 USD</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

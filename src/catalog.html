@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Каталог товаров"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page__breadcrumbs breadcrumbs">
+					<div class="breadcrumbs__container">
+						<div class="breadcrumbs__page">Homepage</div>
+						<div class="breadcrumbs__page">Fruit and vegetables</div>
+					</div>
+				</section>
+				<section class="page__page-title">
+					<div class="page-title__container">
+						<div class="page-title__title">Fruit and vegetables</div>
+						<div class="page-title__view-controls">
+							<button class="page-title__grid">Grid view</button>
+							<button class="page-title__list">List view</button>
+							<div class="page-title__product-count">Products</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__filter-controls filter-controls">
+					<div class="filter-controls__container">
+						<form action="" class="filter-controls__form">
+							<div class="option">
+								<div class="option__item">
+									<input hidden id="o_1" class="option__input" checked type="radio" value="1" name="option">
+									<label for="o_1" class="option__label"><span class="option__text">Filtre text</span></label>
+								</div>
+								<div class="option__item">
+									<input hidden id="o_2" class="option__input" type="radio" value="2" name="option">
+									<label for="o_2" class="option__label"><span class="option__text">Filtre text</span></label>
+								</div>
+							</div>
+							<div class="checkbox">
+								<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Filtre</span></label>
+							</div>
+							<div class="checkbox">
+								<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_2" class="checkbox__label"><span class="checkbox__text">Filtre</span></label>
+							</div>
+							<div class="checkbox">
+								<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_3" class="checkbox__label"><span class="checkbox__text">Filtre</span></label>
+								<select name="form[]" class="form">
+									<option value="1" selected>Select</option>
+									<option value="2">Select</option>
+									<option value="3">Select</option>
+									<option value="4">Select</option>
+								</select>
+							</div>
+						</form>
+						<div class="filter-controls__applied">
+							<span>Applied filtres:</span>
+							<span class="sel">Selected Filtre</span>
+							<span class="sel">Selected Filtre</span>
+						</div>
+					</div>
+				</section>
+				<section class="page__goods goods goods_list">
+					<div class="goods__container">
+						<div class="goods__panel panel">
+							<div data-spollers="768" class="panel__category">
+								<div data-spoller class="panel__title">Categories</div>
+								<div class="panel__body">
+									<ul class="panel__list">
+										<li class="panel__item">Category name</li>
+										<li class="panel__item">Category name</li>
+										<li class="panel__item">Category name</li>
+										<li class="panel__item">Category name</li>
+									</ul>
+								</div>
+							</div>
+							<div data-spollers="768" class="panel__brands">
+								<div data-spoller class="panel__title">Brands</div>
+								<div class="panel__body">
+									<div class="panel__checkbox">
+										<input id="c_4" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_4" class="panel__label"><span class="panel__text">Filtre by brand item</span></label>
+									</div>
+									<div class="panel__checkbox">
+										<input id="c_5" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_5" class="panel__label"><span class="panel__text">Filtre by brand item</span></label>
+									</div>
+									<div class="panel__checkbox">
+										<input id="c_6" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_6" class="panel__label"><span class="panel__text">Filtre by brand item</span></label>
+									</div>
+									<div class="panel__checkbox">
+										<input id="c_7" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_7" class="panel__label"><span class="panel__text">Filtre by brand item</span></label>
+									</div>
+									<div class="panel__checkbox">
+										<input id="c_8" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_8" class="panel__label"><span class="panel__text">Filtre by brand item</span></label>
+									</div>
+								</div>
+							</div>
+							<div data-spollers="768" class="panel__rating">
+								<div data-spoller class="panel__title">Rating</div>
+								<div class="panel__body">
+									<div class="panel__checkbox">
+										<input id="c_9" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_9" class="panel__label">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+										</label>
+									</div>
+									<div class="panel__checkbox">
+										<input id="c_10" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_10" class="panel__label">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+										</label>
+									</div>
+									<div class="panel__checkbox">
+										<input id="c_11" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_11" class="panel__label">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+										</label>
+									</div>
+									<div class="panel__checkbox">
+										<input id="c_12" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_12" class="panel__label">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+										</label>
+									</div>
+									<div class="panel__checkbox">
+										<input id="c_13" data-error="Ошибка" class="panel__input" type="checkbox" value="1" name="form[]">
+										<label for="c_13" class="panel__label">
+											<img src="@img/freshnesecom/icons/star-active.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+											<img src="@img/freshnesecom/icons/star-inactive.svg" alt="">
+										</label>
+									</div>
+								</div>
+							</div>
+							<div data-spollers="768" class="panel__price price-filter">
+								<button type="button" data-spoller class="price-filter__title _icon-arr-down">Price</button>
+								<div data-range class="price-filter__body">
+									<div data-range-item class="price-filter__range"></div>
+									<div class="price-filter__inputs">
+										<label for="r_10" class="price-filter__inputs-label">Min</label>
+										<label for="r_11" class="price-filter__inputs-label">Max</label>
+										<input id="r_10" data-range-from="0" autocomplete="off" type="text" value="500" name="form[]" class="price-filter__input">
+										<input id="r_11" data-range-to="5000" autocomplete="off" type="text" value="1000" name="form[]" class="price-filter__input">
+									</div>
+									<div class="price-filter__buttons">
+										<button type="submit" class="price-filter__button">Apply</button>
+										<button type="reset" class="price-filter__button-reset">Reset</button>
+									</div>
+								</div>	
+							</div>
+						</div>
+						<div class="goods__main">
+							<div class="goods__list">
+								<div class="product-card-list">
+									<div class="product-card-list__image-ibg"></div>
+									<div class="product-card-list__description description-product-card-list">
+										<div class="description-product-card-list__title">Product title</div>
+										<div class="description-product-card-list__text">Space for a small product description </div>
+										<div class="description-product-card-list__rating">
+											<div class="rating rating_set">
+												<div class="rating__body">
+													<div class="rating__active rating__active_black"></div>
+													<div class="rating__items">
+														<input type="radio" class="rating__item" value="1" name="rating">
+														<input type="radio" class="rating__item" value="2" name="rating">
+														<input type="radio" class="rating__item" value="3" name="rating">
+														<input type="radio" class="rating__item" value="4" name="rating">
+														<input type="radio" class="rating__item" value="5" name="rating">
+													</div>
+												</div>
+												<div class="rating__value">3.6</div>
+											</div>
+										</div>
+										<div class="description-product-card-list__properties">
+											<div class="description-product-card-list__property">Fresheness</div>
+											<div class="description-product-card-list__value"><span>New</span> (Extra fresh)</div>
+											<div class="description-product-card-list__property">Farm</div>
+											<div class="description-product-card-list__value">Grocery Tarm Fields</div>
+											<div class="description-product-card-list__property">Delivery</div>
+											<div class="description-product-card-list__value">Europe</div>
+											<div class="description-product-card-list__property">Stock</div>
+											<div class="description-product-card-list__value"><span>320 pcs</span></div>
+										</div>
+									</div>
+									<div class="product-card-list__actions actions-product-card-list">
+										<div class="actions-product-card-list__block">
+											<div class="actions-product-card-list__price">
+												<div class="actions-product-card-list__last-price">36.99 USD</div>
+												<div class="actions-product-card-list__previous-price">48.56</div>
+											</div>
+											<div class="actions-product-card-list__text">
+												<span>Free Shipping</span>
+												<span>Delivery in 1 day</span>
+											</div>
+										</div>
+										<div class="actions-product-card-list__buttons">
+											<button class="actions-product-card-list__button">Product Detail</button>
+											<button class="actions-product-card-list__favorite">Add to wish list</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card-list">
+									<div class="product-card-list__image-ibg"></div>
+									<div class="product-card-list__description description-product-card-list">
+										<div class="description-product-card-list__title">Product title</div>
+										<div class="description-product-card-list__text">Space for a small product description </div>
+										<div class="description-product-card-list__rating">
+											<div class="rating rating_set">
+												<div class="rating__body">
+													<div class="rating__active rating__active_black"></div>
+													<div class="rating__items">
+														<input type="radio" class="rating__item" value="1" name="rating">
+														<input type="radio" class="rating__item" value="2" name="rating">
+														<input type="radio" class="rating__item" value="3" name="rating">
+														<input type="radio" class="rating__item" value="4" name="rating">
+														<input type="radio" class="rating__item" value="5" name="rating">
+													</div>
+												</div>
+												<div class="rating__value">3.6</div>
+											</div>
+										</div>
+										<div class="description-product-card-list__properties">
+											<div class="description-product-card-list__property">Fresheness</div>
+											<div class="description-product-card-list__value"><span>New</span> (Extra fresh)</div>
+											<div class="description-product-card-list__property">Farm</div>
+											<div class="description-product-card-list__value">Grocery Tarm Fields</div>
+											<div class="description-product-card-list__property">Delivery</div>
+											<div class="description-product-card-list__value">Europe</div>
+											<div class="description-product-card-list__property">Stock</div>
+											<div class="description-product-card-list__value"><span>320 pcs</span></div>
+										</div>
+									</div>
+									<div class="product-card-list__actions actions-product-card-list">
+										<div class="actions-product-card-list__block">
+											<div class="actions-product-card-list__price">
+												<div class="actions-product-card-list__last-price">36.99 USD</div>
+												<div class="actions-product-card-list__previous-price">48.56</div>
+											</div>
+											<div class="actions-product-card-list__text">
+												<span>Free Shipping</span>
+												<span>Delivery in 1 day</span>
+											</div>
+										</div>
+										<div class="actions-product-card-list__buttons">
+											<button class="actions-product-card-list__button">Product Detail</button>
+											<button class="actions-product-card-list__favorite">Add to wish list</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card-list">
+									<div class="product-card-list__image-ibg"></div>
+									<div class="product-card-list__description description-product-card-list">
+										<div class="description-product-card-list__title">Product title</div>
+										<div class="description-product-card-list__text">Space for a small product description </div>
+										<div class="description-product-card-list__rating">
+											<div class="rating rating_set">
+												<div class="rating__body">
+													<div class="rating__active rating__active_black"></div>
+													<div class="rating__items">
+														<input type="radio" class="rating__item" value="1" name="rating">
+														<input type="radio" class="rating__item" value="2" name="rating">
+														<input type="radio" class="rating__item" value="3" name="rating">
+														<input type="radio" class="rating__item" value="4" name="rating">
+														<input type="radio" class="rating__item" value="5" name="rating">
+													</div>
+												</div>
+												<div class="rating__value">3.6</div>
+											</div>
+										</div>
+										<div class="description-product-card-list__properties">
+											<div class="description-product-card-list__property">Fresheness</div>
+											<div class="description-product-card-list__value"><span>New</span> (Extra fresh)</div>
+											<div class="description-product-card-list__property">Farm</div>
+											<div class="description-product-card-list__value">Grocery Tarm Fields</div>
+											<div class="description-product-card-list__property">Delivery</div>
+											<div class="description-product-card-list__value">Europe</div>
+											<div class="description-product-card-list__property">Stock</div>
+											<div class="description-product-card-list__value"><span>320 pcs</span></div>
+										</div>
+									</div>
+									<div class="product-card-list__actions actions-product-card-list">
+										<div class="actions-product-card-list__block">
+											<div class="actions-product-card-list__price">
+												<div class="actions-product-card-list__last-price">36.99 USD</div>
+												<div class="actions-product-card-list__previous-price">48.56</div>
+											</div>
+											<div class="actions-product-card-list__text">
+												<span>Free Shipping</span>
+												<span>Delivery in 1 day</span>
+											</div>
+										</div>
+										<div class="actions-product-card-list__buttons">
+											<button class="actions-product-card-list__button">Product Detail</button>
+											<button class="actions-product-card-list__favorite">Add to wish list</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card-list">
+									<div class="product-card-list__image-ibg"></div>
+									<div class="product-card-list__description description-product-card-list">
+										<div class="description-product-card-list__title">Product title</div>
+										<div class="description-product-card-list__text">Space for a small product description </div>
+										<div class="description-product-card-list__rating">
+											<div class="rating rating_set">
+												<div class="rating__body">
+													<div class="rating__active rating__active_black"></div>
+													<div class="rating__items">
+														<input type="radio" class="rating__item" value="1" name="rating">
+														<input type="radio" class="rating__item" value="2" name="rating">
+														<input type="radio" class="rating__item" value="3" name="rating">
+														<input type="radio" class="rating__item" value="4" name="rating">
+														<input type="radio" class="rating__item" value="5" name="rating">
+													</div>
+												</div>
+												<div class="rating__value">3.6</div>
+											</div>
+										</div>
+										<div class="description-product-card-list__properties">
+											<div class="description-product-card-list__property">Fresheness</div>
+											<div class="description-product-card-list__value"><span>New</span> (Extra fresh)</div>
+											<div class="description-product-card-list__property">Farm</div>
+											<div class="description-product-card-list__value">Grocery Tarm Fields</div>
+											<div class="description-product-card-list__property">Delivery</div>
+											<div class="description-product-card-list__value">Europe</div>
+											<div class="description-product-card-list__property">Stock</div>
+											<div class="description-product-card-list__value"><span>320 pcs</span></div>
+										</div>
+									</div>
+									<div class="product-card-list__actions actions-product-card-list">
+										<div class="actions-product-card-list__block">
+											<div class="actions-product-card-list__price">
+												<div class="actions-product-card-list__last-price">36.99 USD</div>
+												<div class="actions-product-card-list__previous-price">48.56</div>
+											</div>
+											<div class="actions-product-card-list__text">
+												<span>Free Shipping</span>
+												<span>Delivery in 1 day</span>
+											</div>
+										</div>
+										<div class="actions-product-card-list__buttons">
+											<button class="actions-product-card-list__button">Product Detail</button>
+											<button class="actions-product-card-list__favorite">Add to wish list</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods__grid">
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+								<div class="product-card ">
+									<div class="product-card__image-ibg">
+									</div>
+									<div class="product-card__title">Product Title</div>
+									<div class="product-card__description">Space for a small product description </div>
+									<div class="product-card__footer">
+										<div class="product-card__price">
+											<span class="product-card__last-price">1.48 USD</span>
+											<span class="product-card__previous-price">48.56</span>
+										</div>
+										<button type="button" class="product-card__button">Buy now</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__goods-footer goods-footer">
+					<div class="goods-footer__container">
+						<div class="goods-footer__pages">
+							<div class="goods-footer__page">Page:</div>
+							<span>1</span>
+							<span>2</span>
+							<span class="active-span">3</span>
+							<span>4</span>
+						</div>
+						<div class="goods-footer__show-more">
+							<button class="goods-footer__button">Show more products</button>
+						</div>
+						<div class="goods-footer__prod-counts">
+							<span>336</span>Products
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

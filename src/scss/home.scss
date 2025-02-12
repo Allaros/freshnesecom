@@ -1,0 +1,854 @@
+//====================================================================================================
+.banners {
+
+    // .banners__container
+
+    &__container {
+        @include adaptiveValue("padding-top", 64, 32);
+        @include adaptiveValue("padding-bottom", 64, 32);
+        display: grid;
+        grid-template-columns: rem(270) 1fr 1fr;
+        gap: rem(32);
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: rem(600)){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // .banners__options
+
+    &__options {
+    }
+
+    // .banners__banner
+
+    &__banner {
+        background: url("@img/freshnesecom/main/banners/Banner.jpg") center / cover no-repeat;
+        border-radius: rem(12);
+        padding: rem(48) rem(32) rem(32) rem(32);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: rem(60);
+        align-items: flex-start;
+    }
+
+    // .banners__header
+
+    &__header {
+    }
+
+    // .banners__subfocus
+
+    &__subfocus {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+        color: $mainGreenColor;
+    }
+
+    // .banners__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(22);
+        @include adaptiveValue("font-size", 22, 17);
+        line-height: math.div(33, 22);
+        color: #151515;
+    }
+
+    // .banners__button
+
+    &__button {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        line-height: math.div(22, 15);
+        color: #151515;
+        border: 2px solid #92C064;
+        padding: rem(12) rem(16);
+        border-radius: rem(12);
+        transition: background-color 0.3s ease 0s;
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(12);
+            &::after{
+                content: url("@img/freshnesecom/icons/arrow-right.svg");
+
+            }
+        }
+        @media (any-hover: hover){
+            &:hover{
+                background-color: rgba($color: #92C064, $alpha: 0.2);
+            }
+        }
+    }
+}
+.options {
+    @media (max-width: $tablet){
+        width: 100%;
+        text-align: center;
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+    // .options__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        line-height: math.div(27, 18);
+        color: #151515;
+
+    }
+
+    // .options__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem(12);
+        margin-top: rem(16);
+        &:not(:last-child) {
+            margin-bottom: rem(48);
+        }
+        @media (max-width: $tablet){
+            align-items: center;
+        }
+    }
+
+    &__body{
+    }
+
+    // .options__link
+
+    &__link {
+        line-height: math.div(19, 14);
+        color: $mainGreenColor;
+        @media (any-hover: hover){
+            &:hover{
+                text-decoration-line: underline;
+            }
+        }
+
+    }
+
+    // .options__button
+
+    &__button {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        line-height: math.div(22, 15);
+        color: #151515;
+        display: inline-block;
+        padding: rem(13) rem(16);
+        background-color: #f5f5f5;
+        border-radius: rem(12);
+        transition: background-color 0.2s ease 0s;
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(12);
+            &::after{
+                content: url('@img/freshnesecom/icons/black-arrow.svg');
+                @media (max-width: $tablet){
+                    display: none;
+                }
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover{
+                background-color: #e5e5e5;
+            }
+        }
+    }
+}
+
+//====================================================================================================
+.products {
+
+    // .products__container
+
+    &__container {
+        @include adaptiveValue("padding-top", 64, 32);
+        @include adaptiveValue("padding-bottom", 64, 32);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include adaptiveValue("column-gap", 32, 16);
+        @include adaptiveValue("row-gap", 128, 32);
+        align-items: start;
+        @media (max-width:$tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__options{
+    }
+}
+.product-card {
+    border: 1px solid #D1D1D1;
+    border-radius: rem(12);
+    padding: rem(16);
+    display: flex;
+    flex-direction: column;
+
+    // .product-card__image-ibg
+
+    &__image-ibg {
+        padding-bottom: percent(190, 270);
+        padding-left: 100%;
+        background-color: #f5f5f5;
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+        .product-card_sale &{
+            &::before{
+                content: '-36%';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: 'Poppins';
+                font-weight: 600;
+                font-size: rem(12);
+                line-height: math.div(18, 12);
+                color: #6A983C;
+                background-color: #F4F8EC;
+                padding: 0 rem(16);
+                border-radius: rem(12);
+                transform: translate(10%, 50%);
+            }
+        }
+    }
+
+    // .product-card__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: rem(15);
+        line-height: math.div(22, 15);
+        color: #151515;
+        &:not(:last-child) {
+            margin-bottom: rem(4);
+        }
+    }
+
+    // .product-card__description
+
+    &__description {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #575757;
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    // .product-card__footer
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    // .product-card__price
+
+    &__price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .product-card__last-price
+
+    &__last-price {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        @include adaptiveValue("font-size", 18, 15);
+        line-height: math.div(27, 18);
+        color: #151515;
+    }
+
+    // .product-card__previous-price
+
+    &__previous-price {
+        display: none;
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+        text-decoration-line: line-through;
+        color: #A9A9A9;
+        .product-card_sale &{
+            display: inline;
+        }
+    }
+
+    // .product-card__button
+
+    &__button {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        @include adaptiveValue("font-size", 15, 12);
+        line-height: math.div(22, 15);
+        color: #FFFFFF;
+        background-color: #6A983C;
+        border: 2px solid #46760A;
+        border-radius: rem(12);
+        padding: rem(6) rem(12);
+    }
+}
+.option-place {
+
+    // .option-place__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+//====================================================================================================
+.responses {
+
+    // .responses__container
+
+    &__container {
+        @include adaptiveValue("padding-top", 64, 32);
+        @include adaptiveValue("padding-bottom", 64, 32);
+        overflow: hidden;
+    }
+
+    // .responses__header
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .responses__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        @include adaptiveValue("font-size", 18, 15);
+        line-height: math.div(27, 18);
+        color: #151515;
+    }
+
+    // .responses__more
+
+    &__more {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        @include adaptiveValue("font-size", 15, 12);
+        line-height: math.div(22, 15);
+        color: #151515;
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(12);
+            &::after{
+                content: url('@img/freshnesecom/icons/arrow-right.svg');
+            }
+        }
+
+    }
+
+    &__main{
+        position: relative;
+        margin: 0 rem(-45);
+    }
+
+    &__item {
+
+        // .responses__item_prev
+
+        &_prev {
+            @include adaptiveValue("width", 32, 24);
+            height: rem(48);
+            background-color: #000;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 0 rem(12) rem(12) 0;
+            &::after{
+                content: url('@img/freshnesecom/icons/white-arrow.svg');
+                display: block;
+                transform: translate(-5%, -10%) rotate(-180deg);
+            }
+        }
+        &_next {
+            @include adaptiveValue("width", 32, 24);
+            height: rem(48);
+            
+            background-color: #000;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+            border-radius: rem(12) 0 0 rem(12);
+            &::after{
+                content: url('@img/freshnesecom/icons/white-arrow.svg');
+                display: block;
+                transform: translate(5%, 10%);
+            }
+        }
+    }
+    // .responses__slider
+
+    &__slider {
+        margin: 0 -15%;
+        position: relative;
+        @media (max-width: $mobile){
+            margin: 0 rem(32);
+        }
+    }
+
+    // .responses__swiper
+
+    &__swiper {
+    }
+
+    // .responses__slide
+
+    &__slide {
+        padding: rem(30) 0;
+    }
+}
+.response-card {
+    border: 1px solid #F1F1F1;
+    border-radius: rem(12);
+    padding: rem(24) rem(32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+    position: relative;
+    // .response-card__text
+
+    &__text {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: rem(15);
+        @include adaptiveValue("font-size", 15, 13);
+        line-height: math.div(22, 15);
+        text-align: center;
+        color: #151515;
+    }
+
+    // .response-card__name
+
+    &__name {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+        text-align: center;
+        color: #A9A9A9;
+        margin-bottom: rem(15);
+    }
+
+    // .response-card__image-ibg
+
+    &__image-ibg {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        img{
+            border-radius: 50%;
+        }
+    }
+}
+.prev{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%; 
+    background: linear-gradient(90deg, rgba(255,255,255,0.7), rgba(255,255,255,0)  77% 100%);
+    width: 10%;
+}
+.next{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%; 
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.7) 100% 100%);
+    width: 10%;
+}
+
+//====================================================================================================
+.catalog {
+
+    // .catalog__container
+
+    &__container {
+        @include adaptiveValue("padding-top", 64, 32);
+        @include adaptiveValue("padding-bottom", 64, 32);
+    }
+
+    // .catalog__header
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .catalog__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        @include adaptiveValue("font-size", 18, 15);
+        line-height: math.div(27, 18);
+        color: #151515;
+    }
+
+    // .catalog__more
+
+    &__more {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        @include adaptiveValue("font-size", 15, 12);
+        line-height: math.div(22, 15);
+        color: #151515;
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(12);
+            &::after{
+                content: url('@img/freshnesecom/icons/arrow-right.svg');
+            }
+        }
+
+    }
+
+    // .catalog__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: rem(32);
+        padding: rem(32) 0 0 0;
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: rem(550)){
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+//====================================================================================================
+
+.blogs {
+
+    // .blogs__container
+
+    &__container {
+        @include adaptiveValue("padding-top", 64, 32);
+        @include adaptiveValue("padding-bottom", 64, 32);
+
+    }
+
+    // .blogs__dinner
+
+    &__dinner {
+        flex: 0 1 percent(469, 1260);
+
+    }
+    &__block{
+        column-gap: rem(32);
+        row-gap: rem(48);
+        justify-content: space-between;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: percent(470, 1260) percent(270, 1260) percent(370, 1260);
+        @media (max-width: $tablet){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // .blogs__vegetable
+
+    &__vegetable {
+        flex: 0 1 percent(269, 1260);
+    }
+
+    // .blogs__recipes
+
+    &__recipes {
+        flex: 0 1 percent(369, 1260);
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+
+    }
+
+    // .blogs__recipe
+
+    &__recipe {
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: rem(32);
+    }
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        @include adaptiveValue("font-size", 18, 15);
+        line-height: math.div(27, 18);
+        color: #151515;
+    }
+
+    &__more {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        @include adaptiveValue("font-size", 15, 12);
+        line-height: math.div(22, 15);
+        color: #151515;
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(12);
+            &::after{
+                content: url('@img/freshnesecom/icons/arrow-right.svg');
+            }
+        }
+    }
+}
+.dinner {
+    background: url('@img/freshnesecom/main/blogs/blog-1.jpg') center / cover no-repeat;
+    border-radius: rem(12);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @media (max-width:$tablet){
+        @include adaptiveValue("height", 400, 300);
+    }
+    // .dinner__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(22);
+        line-height: math.div(33, 22);
+        color: #FFFFFF;
+    }
+
+    // .dinner__footer
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: rem(12);
+        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        padding: rem(24);
+        height: 50%;
+        border-radius: 0 0 rem(13) rem(13);
+    }
+
+    // .dinner__image-ibg
+
+    &__image-ibg {
+        padding-bottom: rem(32);
+        padding-left: rem(32);
+        img{
+            border-radius: 50%;
+        }
+    }
+
+    // .dinner__author
+
+    &__author {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #FFFFFF;
+    }
+
+    // .dinner__date
+
+    &__date {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #FFFFFF;
+    }
+}
+.vegetable {
+
+    // .vegetable__image-ibg
+
+    &__image-ibg {
+        padding-bottom: percent(180, 269);
+        img{
+            border-radius: rem(12);
+        }
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    // .vegetable__body
+
+    &__body {
+    }
+
+    // .vegetable__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        line-height: math.div(27, 18);
+        color: #151515;
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    // .vegetable__author
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+    }
+
+    // .vegetable__name
+
+    &__name {
+        font-size: 12px;
+        line-height: 16px;
+        color: #151515;
+    }
+
+    // .vegetable__date
+
+    &__date {
+        font-size: 12px;
+        line-height: 16px;
+        color: #151515;
+    }
+}
+.recipe {
+    display: flex;
+    gap: rem(48);
+    @media (max-width:$tablet){
+        justify-content: space-between;
+        border: 1px solid #aaa;
+        border-radius: rem(12);
+        padding: rem(10);
+    }
+    @media (max-width:$mobile){
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: rem(16);
+    }
+    // .recipe__content
+
+    &__content {
+    }
+
+    // .recipe__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: rem(15);
+        line-height: math.div(22, 15);
+        color: #151515;
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    // .recipe__author
+
+    &__author {
+        display: flex;
+        gap: rem(16);
+    }
+
+    // .recipe__name
+
+    &__name {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #151515;
+    }
+
+    // .recipe__date
+
+    &__date {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #151515;
+    }
+
+    // .recipe__image-ibg
+
+    &__image-ibg {
+        height: rem(96);
+        padding-left: rem(96);
+        img{
+            border-radius: rem(12);
+        }
+    }
+}
+
+
+//====================================================================================================
+//====================================================================================================

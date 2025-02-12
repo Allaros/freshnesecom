@@ -1,0 +1,901 @@
+.breadcrumbs {
+
+    // .breadcrumbs__container
+
+    &__container {
+        padding: rem(16) rem(45);
+        display: flex;
+        gap: rem(8);
+        flex-wrap: wrap;
+    }
+
+    // .breadcrumbs__page
+
+    &__page {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #A9A9A9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(8);
+        &::after{
+            content: '/';
+            display: block;
+        }
+        &:last-child{
+            color: #151515;
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+
+//====================================================================================================
+.page-title {
+
+    // .page-title__container
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem(8) rem(45);
+        flex-wrap: wrap;
+        gap: rem(15);
+    }
+
+    // .page-title__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(32);
+        @include adaptiveValue("font-size", 32, 20);
+        line-height: math.div(48, 32);
+        color: #151515;
+    }
+
+    // .page-title__view-controls
+
+    &__view-controls {
+        display: flex;
+        align-items: center;
+        gap: rem(24);
+        @include adaptiveValue("gap", 24, 12);
+    }
+
+    // .page-title__grid
+
+    &__grid {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #A9A9A9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(4);
+        &::before{
+            content: url('@img/freshnesecom/icons/grid.svg');
+            transform: translate(0, 10%);
+        }
+        &.grid-active{
+            color: #6A983C;
+            text-decoration: underline;
+        }
+    }
+
+    // .page-title__list
+
+    &__list {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #A9A9A9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(4);
+        &::before{
+            content: url('@img/freshnesecom/icons/list.svg');
+            transform: translate(0, 10%);
+        }
+        &.list-active{
+            color: #6A983C;
+            text-decoration: underline;
+        }
+    }
+
+    // .page-title__product-count
+
+    &__product-count {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #A9A9A9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(8);
+        &::before{
+            content: '117';
+            display: block;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: rem(12);
+            line-height: math.div(18, 12);
+            color: #6A983C;
+            padding: 0 rem(8);
+            background-color: #F4F8EC;
+            border-radius: rem(12);
+            transform: translate(0, 10%);
+        }
+    }
+}
+
+
+//====================================================================================================
+.filter-controls {
+
+    // .filter-controls__container
+
+    &__container {
+
+    }
+    
+
+    // .filter-controls__form
+
+    &__form {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+        flex-wrap: wrap;
+    }
+    &__applied{
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+        color: #A9A9A9;
+        display: flex;
+        gap: rem(16);
+        align-items: center;
+        padding: rem(16) 0;
+    }
+}
+.option {
+    background-color: #f5f5f5;
+    border-radius: rem(12);
+    padding: rem(9) rem(16);
+    display: flex;
+    gap: rem(16);
+    flex-direction: row;
+    align-items: center;
+    // .options__item
+
+    &__item {
+    }
+
+    // .options__input
+
+    &__input {
+    }
+
+    // .options__label
+
+    &__label {
+        line-height: math.div(19, 14);
+        color: #151515;
+    }
+
+    // .options__text
+
+    &__text {
+    }
+}
+.checkbox {
+    border-radius: rem(12);
+    background-color: #f5f5f5;
+    padding: rem(9) rem(16);
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    // .checkbox__input
+
+    &__input {
+    }
+
+    // .checkbox__label
+
+    &__label {
+        &::after{
+            content: 'Nbm';
+            display: block;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: rem(12);
+            line-height: math.div(16, 12);
+            color: #151515;
+            background-color: #fff;
+            padding: 0 rem(8);
+            border-radius: rem(12);
+            border: 2px solid #d1d1d1;
+        }
+    }
+
+    // .checkbox__text
+
+    &__text {
+    }
+}
+.sel{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: math.div(18, 12);
+    color: #6A983C;
+    background-color: #F4F8EC;
+    border-radius: rem(12);
+    padding: 0 rem(8);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(4);
+    &::after{
+        content: url('@img/freshnesecom/icons/cross.svg');
+
+    }
+}
+
+//====================================================================================================
+
+.product-card-list {
+    display: grid;
+    grid-template-columns: percent(270, 870) 1fr percent(270, 870);
+    border: 1px solid #D1D1D1;
+    border-radius: rem(12);
+    @media (max-width: $tablet){
+        grid-template-columns: rem(400) 1fr;
+    }
+    @media (max-width: $tablet){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    // .product-card-list__image-ibg
+
+    &__image-ibg {
+        @media (max-width: $mobile){
+            padding-bottom: 70%;
+            height: 100%;
+        }
+        @media (max-width: $tablet){
+            min-width: rem(250);
+        }
+        background-color: #fafafa;
+        border-radius: rem(12);
+        img{
+            border-radius: rem(12);
+        }
+
+    }
+
+    // .product-card-list__description
+
+    &__description {
+        @media (max-width: $mobile){
+        }
+        padding: rem(32);
+    }
+
+    // .product-card-list__actions
+
+    &__actions {
+
+        padding: rem(32);
+    }
+}
+.description-product-card-list {
+
+    // .description-product-card-list__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        line-height: math.div(27, 18);
+        color: #151515;
+        &:not(:last-child) {
+            margin-bottom: rem(4);
+        }
+    }
+
+    // .description-product-card-list__text
+
+    &__text {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #575757;
+    }
+
+    // .description-product-card-list__rating
+
+    &__rating {
+    }
+
+    // .description-product-card-list__properties
+
+    &__properties {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        row-gap: rem(12);
+        column-gap: rem(20);
+        @media (max-width: $mobile) {
+            column-gap: rem(10);
+        }
+    }
+
+    // .description-product-card-list__property
+
+    &__property {
+        font-size: rem(14);
+        line-height: math.div(19, 14);
+        color: #A9A9A9;
+    }
+
+    // .description-product-card-list__value
+
+    &__value {
+        font-size: rem(14);
+        line-height: math.div(19, 14);
+        color: #A9A9A9;
+        span{
+            color: $mainGreenColor;
+        }
+    }
+}
+.rating {
+    padding-top: rem(4);
+    padding-bottom: rem(20);
+    // .rating_set
+
+    &_set {
+    }
+
+    // .rating__body
+
+    &__body {
+    }
+
+    // .rating__active
+
+    &__active {
+
+    }
+    &__active_black{
+        &::before{
+            color: #151515;
+        }
+    }
+
+    // .rating__items
+
+    &__items {
+    }
+
+    // .rating__item
+
+    &__item {
+    }
+
+    // .rating__value
+
+    &__value {
+        display: none;
+    }
+}
+.actions-product-card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(16);
+    @media (max-width: $tablet){
+        grid-area: 2 / 1 / 3 / 3;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media (max-width: $mobile){
+        grid-area: auto;
+    }
+    @media (max-width: $mobileSmall){
+        flex-direction: column;
+    }
+    // .actions-product-card-list__price
+
+    &__price {
+    }
+
+    &__block{
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $mobileSmall) {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+    // .actions-product-card-list__last-price
+
+    &__last-price {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        line-height: math.div(27, 18);
+        color: #151515;
+    }
+
+    // .actions-product-card-list__previous-price
+
+    &__previous-price {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+        text-decoration-line: line-through;
+        color: #A9A9A9;
+    }
+
+    // .actions-product-card-list__text
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        span{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(12);
+            line-height: math.div(18, 12);
+            color: #A9A9A9;
+            &:last-child{
+                font-family: 'Open Sans';
+                font-size: rem(12);
+                line-height: math.div(16, 12);
+                color: #A9A9A9;
+            }
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        gap: rem(10);
+        flex-direction: column;
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+
+    }
+
+    // .actions-product-card-list__button
+
+    &__button {
+        font-family: 'Poppins';
+        font-weight: 700;
+        @include adaptiveValue("font-size", 15, 12);
+        line-height: math.div(22, 15);
+        color: #FFFFFF;
+        background-color: $mainGreenColor;
+        border: 2px solid #46760A;
+        border-radius: 12px;
+        padding: rem(12) rem(16);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(12);
+        white-space: nowrap;
+        &::after{
+            content: url('@img/freshnesecom/icons/white-arrow.svg');
+            display: block;
+            transform: scale(0.7) translate(0, 10%);
+        }
+    }
+
+    // .actions-product-card-list__favorite
+
+    &__favorite {
+        font-family: 'Poppins';
+        font-weight: 700;
+        @include adaptiveValue("font-size", 15, 12);
+        line-height: math.div(22, 15);
+        color: #151515;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(12);
+        background: #F5F5F5;
+        border-radius: 12px;
+        padding: rem(7) rem(12);
+        white-space: nowrap;
+        &::before{
+            content: url('@img/freshnesecom/icons/heart.svg');
+            display: block;
+            transform: translate(0, 10%);
+        }
+    }
+}
+
+//====================================================================================================
+.goods {
+
+    // .goods__container
+
+    &__container {
+        display: grid;
+        grid-template-columns: percent(270, 1260) 1fr;
+        gap: rem(32);
+        @include adaptiveValue("padding-bottom", 64, 32);
+        @include adaptiveValue("padding-top", 64, 32);
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // .goods__panel
+
+    &__panel {
+    }
+
+    // .goods__main
+
+    &__main {
+    }
+
+    // .goods__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+        .goods_grid &{
+            display: none;
+        }
+    }
+
+    // .goods__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: rem(32);
+        row-gap: rem(48);
+        .goods_list &{
+            display: none;
+        }
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: rem(550)) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: rem(48);
+    @media (max-width: $mobile) {
+        gap: rem(4);
+    }
+    // .panel__category
+
+    &__category {
+    }
+
+    // .panel__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        line-height: math.div(22, 18);
+        color: #151515;
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    // .panel__body
+
+    &__body {
+    }
+
+    // .panel__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem(12);
+    }
+
+    // .panel__item
+
+    &__item {
+        line-height: math.div(19, 14);
+        color: #151515;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &::after{
+            content: '320';
+            display: block;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: rem(12);
+            line-height: math.div(18, 12);
+            color: #6A983C;
+            background: #F4F8EC;
+            border-radius: 12px;
+            padding: 0 rem(8);
+        }
+    }
+
+    // .panel__brands
+
+    &__brands {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+    }
+
+    // .panel__checkbox
+
+    &__checkbox {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: rem(12);
+        }
+    }
+
+    // .panel__input
+
+    &__input {
+        position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus + .panel__label:before {
+		}
+		&:checked + .panel__label:before {
+			background: $mainGreenColor;
+			content: url('@img/freshnesecom/icons/confirm.svg');
+			border-color: #46760A;
+		}
+    }
+
+    // .panel__label
+
+    &__label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        gap: 10px;
+        &:before {
+            content: "";
+            align-self: flex-start;
+            flex: 0 0 20px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #D1D1D1;
+            border-radius: rem(4);
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    // .panel__text
+
+    &__text {
+    }
+
+    // .panel__rating
+
+    &__rating {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+    }
+
+    // .panel__price
+
+    &__price {
+    }
+}
+
+.price-filter {
+
+    // .price-filter__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(18);
+        line-height: math.div(22, 18);
+        color: #151515;
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    // .price-filter__body
+
+    &__body {
+    }
+
+    // .price-filter__inputs
+
+    &__inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: rem(33);
+        row-gap: rem(4);
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+    &__inputs-label{
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+        color: #151515;
+    }
+	// .price-filter__buttons
+
+	&__buttons {
+        display: flex;
+        align-items: center;
+        gap: rem(33);
+	}
+
+	// .price-filter__button
+
+	&__button {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        line-height: math.div(22, 15);
+        color: #FFFFFF;
+        background: $mainGreenColor;
+        border: 2px solid #46760A;
+        border-radius: 12px;
+        padding: rem(8) rem(16);
+	}
+
+	// .price-filter__button-reset
+
+	&__button-reset {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        line-height: math.div(22, 15);
+        color: #A9A9A9;
+        padding: rem(10) rem(18);
+        
+	}
+
+    // .price-filter__input
+
+    &__input {
+        border: 1px solid #D1D1D1;
+        width: 100%;
+        padding: rem(11) rem(22);
+        border-radius: rem(12);
+        background: #F9F9F9;
+        line-height: math.div(19, 14);
+        color: #A9A9A9;
+    }
+
+    // .price-filter__range
+
+    &__range {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+}
+.goods-footer {
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem(30) rem(45);
+    }
+
+    // .goods__pages
+
+    &__pages {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #151515;
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+    }
+
+    // .goods__page
+
+    &__page {
+    color: #A9A9A9;
+    }
+
+    // .goods__show-more
+
+    &__show-more {
+    }
+
+    // .goods__button
+
+    &__button {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: rem(15);
+        @include adaptiveValue("font-size", 15, 10);
+        line-height: math.div(22, 15);
+        color: #FFFFFF;
+        background-color: $mainGreenColor;
+        padding: rem(12) rem(16);
+        @include adaptiveValue("padding-right", 16, 4);
+        @include adaptiveValue("padding-left", 16, 4);
+        @include adaptiveValue("padding-top", 12, 3);
+        @include adaptiveValue("padding-bottom", 12, 3);
+        border: 2px solid #46760A;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(12);
+        &::after{
+            content: url('@img/freshnesecom/icons/white-arrow.svg');
+            display: block;
+            transform: translate(0, 0) rotate(90deg) scale(0.7);
+        }
+    }
+
+    &__button-articles{
+        &::after{
+            transform: translate(0, 12%) rotate(0deg) scale(0.7);
+        }
+    }
+
+    // .goods__prod-counts
+
+    &__prod-counts {
+        @media (max-width: $mobileSmall) {
+            display: none;
+        }
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: #A9A9A9;
+        span{
+            display: inline-block;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: rem(12);
+            line-height: math.div(18, 12);
+            color: #6A983C;
+            background: #F4F8EC;
+            border-radius: 12px;
+            padding: 0 rem(8);
+            margin-right: rem(8);
+        }
+    }
+}
+.active-span {
+    color: #6A983C;
+}
+
+//====================================================================================================
